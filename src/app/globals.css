@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-electric-purple: #c800ff;
+  --main-canary-yellow: #ffea00;
+  --secondary-uranian-blue: #a9def9;
+  --secondary-mauve-purple: #e4c1f9;
+  --tertiary-madder-red: #a31621;
+  --tertiary-mint-green: #71b48d;
+  --tertiary-coral-orange: #fc7753;
+}
+
+#description {
+  visibility: hidden;
+}
+
+#topButtons {
+  height: 1vh;
+  display: flex;
+  justify-content: space-between;
+  max-height: 4.5rem;
+}
+
+header {
+  background-color: var(--main-canary-yellow);
+  border-bottom: 2px solid var(--main-electric-purple);
+}
+
+nav {
+  background-color: var(--main-canary-yellow);
+  border-bottom: 2px solid var(--main-electric-purple);
+}
+
+.product-card {
+  min-width: 15rem;
+}
+
+/* globals.css */
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+}
+
+#kazamLogo {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #ffea00;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+header img {
+  height: 5rem;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #007bff;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+footer {
+  background-color: #f7e219;
+  text-align: center;
+  padding: 1rem;
+}
+
+.nav-link:hover {
+  background-color: var(--tertiary-coral-orange);
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 15vh;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  header img {
+    height: 5rem;
+  }
+
+  nav {
+    height: 10vh;
+    justify-content: flex-end;
+  }
+
+  #topButtons {
+    height: 1vh;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+  }
+
+  #description {
+    visibility: visible;
+  }
+
+  nav a {
+    margin-left: 1rem;
+
+    footer {
+      padding: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    div {
+      margin-bottom: 10px;
+    }
+
+    label {
+      margin-right: 10px;
+    }
+
+    input {
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+}
