@@ -93,13 +93,13 @@ export default function NewProductForm({ categories, era, set }) {
             id="era"
             name="era"
             defaultValue=""
-            
             onChange={handleChange}
-            required>
+            required
+          >
             <option disabled value="">
-            Choose the best suited...
-          </option>
-          {era.map((era) => {
+              Choose the best suited...
+            </option>
+            {era.map((era) => {
               return (
                 <option
                   key={era.id}
@@ -108,8 +108,9 @@ export default function NewProductForm({ categories, era, set }) {
                 >
                   {era.era_name}
                 </option>
-              )})}
-              </select>
+              );
+            })}
+          </select>
         </div>
         <div>
           <label htmlFor="set">Set:</label>
@@ -118,13 +119,13 @@ export default function NewProductForm({ categories, era, set }) {
             id="set"
             name="set"
             defaultValue=""
-            
             onChange={handleChange}
-            required>
+            required
+          >
             <option disabled value="">
-            Choose the best suited...
-          </option>
-          {set.map((set) => {
+              Choose the best suited...
+            </option>
+            {set.map((set) => {
               return (
                 <option
                   key={set.id}
@@ -133,9 +134,9 @@ export default function NewProductForm({ categories, era, set }) {
                 >
                   {set.set_name}
                 </option>
-              )})}
-              </select>
-          />
+              );
+            })}
+          </select>
         </div>
         <div>
           <label htmlFor="inventory">Stock Volume:</label>
